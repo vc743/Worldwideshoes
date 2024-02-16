@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+:root{
+    --white: #FFFFFF;
+    --grey: #CBD5E1;
+    --lightBlue: #3B82F6;
+    --midBlue: #426AC6;
+    --dark: #304065;
+    --darkest: #0F172A;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+.container{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/*Header and footer styles*/
+header, footer{
+    background-color: var(--darkest);
+    padding: 1em;
+}
+
+.nav-list, .icon-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.nav-item, .icon-item{
+    margin-left: 1em;
+}
+
+.nav-links, .icon-link{
+    color: var(--grey);
+    text-decoration: none;
+    padding: 8px;
+}
+
+.nav-links:hover, .icon-link:hover{
+    border-bottom: 2px solid var(--lightBlue);
+}
+
+/*Hero Section*/
+.hero{
+    padding: 150px 0;
+    background-image: url("images/fondo.avif");
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(50%);
+    color: var(--white);
+}
+
+.hero h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 4rem;
+}
+
+/*Main section*/
+main{
+    margin-top: 3em;
+}
+
+h2{
+    text-align: center;
+    color: var(--midBlue);
+    margin-top: 80px;
+}
+
+/*Shoes Gallery*/
+.shoes-gallery{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-card{
+    width: 200px;
+    height: 250px;
+}
+
+.shoes-card{
+    opacity: 0.55;
+    cursor: pointer;
+}
+
+.shoes-card:hover{
+    opacity: 1;
+}
+
+.shoes-card p{
+    font-size: 1rem;
+    max-width: 200px;
+    margin: 0;
+}
+
+.shoes-card p:first-of-type{
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.new-shoes,
+.best-seller{
+    padding: 5px;
+    background-color: var(--darkest);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    max-width: 200px;
+}
+.best-seller{
+    background-color: var(--lightBlue);
+}
+
+/*Contact us Section*/
+#contactus{
+    margin-bottom: 3em;
+}
+
+.contactus-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.input-group{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+form,
+textarea{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+textarea{
+    resize: none;
+}
+
+input, textarea{
+    outline: none;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--grey);
+    color: var(--darkest);
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn button{
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 28px;
+    margin-top: 5px;
+    background-color: var(--lightBlue);
+    color: var(--white);
+    font-weight: bold;
+    transition: all ease .3s;
+}
+.submit-btn button:hover{
+    background-color: var(--darkest);
+}
+
+/*Footer*/
+footer{
+    color: var(--grey);
+    text-align: center;
+}
+
+.icon-list{
+    justify-content: center;
+}
+
+.icon{
+    font-size: 1.8rem;
+}
+
+.copywrite{
+    color: #CCC;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.createdby{
+    margin-bottom: 2px;
+}
+
+.highlighted{
+    color: var(--lightBlue);
+}
+
+@media (max-width: 545px){
+    .shoes-gallery{
+        justify-content: center;
+    }
+
+    .input-group{
+        flex-direction: column;
+    }
+}
